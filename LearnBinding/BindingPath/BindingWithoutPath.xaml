@@ -13,13 +13,13 @@
             码里这个“.”可以省略不写，但在C#代码里却不能省略。
         -->
         <StackPanel.Resources>
-            <sys:String x:Key="mystring">
+            <sys:String x:Key="Mystring">
                 菩提本无树，明镜亦非台
                 本来无一物，何处惹尘埃
             </sys:String>
         </StackPanel.Resources>
         <TextBlock x:Name="TextBlock1"
-                   Text="{Binding Path=., Source={StaticResource mystring}}"
+                   Text="{Binding Path=., Source={StaticResource Mystring}}"
                    TextWrapping="Wrap" />
     </StackPanel>
 </Window>
