@@ -20,7 +20,10 @@ namespace LearnBinding.BindingPath
     /// 集合对象作为绑定源时  path可以做的操作
     /// </summary>
     public partial class ListSourceAsPath : Window
+
     {
+        private List<string> strList;
+        private List<Country> countries;
         public ListSourceAsPath()
         {
 
@@ -73,8 +76,7 @@ namespace LearnBinding.BindingPath
 
         }
 
-        private List<string> strList;
-        private List<Country> countries;
+        
 
 
         
