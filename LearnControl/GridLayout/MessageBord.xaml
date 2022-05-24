@@ -1,0 +1,35 @@
+﻿<Window x:Class="LearnControl.GridLayout.MessageBord" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:LearnControl.GridLayout" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="部门留言板" Width="800"
+        Height="450" mc:Ignorable="d">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" MinWidth="120" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="80" MinWidth="80" />
+            <ColumnDefinition Width="4" />
+            <ColumnDefinition Width="80" MinWidth="80" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="4" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4" />
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" Grid.Column="0"
+                 Text="请选择部门并留言:" />
+        <ComboBox Grid.Row="0" Grid.Column="1"
+                  Grid.ColumnSpan="4" />
+        <TextBox Grid.Row="2" Grid.Column="0"
+                 Grid.ColumnSpan="5" Text="在这里输入留言"
+                 TextWrapping="WrapWithOverflow" />
+        <Button Grid.Row="4" Grid.Column="2"
+                Content="提交" />
+        <Button Grid.Row="4" Grid.Column="4"
+                Content="清除" />
+
+    </Grid>
+</Window>

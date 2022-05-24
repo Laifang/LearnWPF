@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="ExcelReportTools">
+      <HintPath>..\..\..\OneDrive\csharp_code\ReadExcel\ReadExcel\bin\Release\net6.0\ExcelReportTools.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniExcel">
+      <HintPath>..\..\..\OneDrive\csharp_code\ReadExcel\ReadExcel\bin\Release\net6.0\MiniExcel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

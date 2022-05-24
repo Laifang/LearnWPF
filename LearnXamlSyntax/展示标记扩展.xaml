@@ -1,0 +1,21 @@
+﻿<Window x:Class="LearnXamlSyntax.展示标记扩展" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:LearnXamlSyntax" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="展示标记扩展" Width="400"
+        Height="200" mc:Ignorable="d">
+    <StackPanel Background="LightGray">
+        <TextBlock Height="20" Margin="5"
+                   Background="White"
+                   Text="{Binding ElementName=Slider, Path=Value, Mode=OneWay}">
+            <!--<TextBlock.Text>
+                <Binding
+                    ElementName="Slider"
+                    Mode="OneWay"
+                    Path="Value" />
+            </TextBlock.Text>-->
+            <!--  注释掉的代码展示了 标记扩展语法的 等价属性元素赋值方法 很繁琐  -->
+        </TextBlock>
+        <Slider x:Name="Slider" Height="20"
+                Margin="5" Background="White" />
+    </StackPanel>
+</Window>
