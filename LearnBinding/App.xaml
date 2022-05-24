@@ -1,8 +1,5 @@
-﻿<Application
-    x:Class="LearnBinding.App"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:LearnBinding"
-    StartupUri="\BindingPath\EnuListAsSource_V2.xaml">
+﻿<Application x:Class="LearnBinding.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:LearnBinding"
+             StartupUri="\BindingPath\ADOAsSource.xaml">
     <Application.Resources />
 </Application>
