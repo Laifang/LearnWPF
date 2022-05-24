@@ -59,6 +59,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BindingPath\BindingWithoutSource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BindingPath\LearnBindingPath.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -77,6 +81,9 @@
     </Compile>
     <Compile Include="BindingPath\BindingWithoutPath.xaml.cs">
       <DependentUpon>BindingWithoutPath.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindingPath\BindingWithoutSource.xaml.cs">
+      <DependentUpon>BindingWithoutSource.xaml</DependentUpon>
     </Compile>
     <Compile Include="BindingPath\LearnBindingPath.xaml.cs">
       <DependentUpon>LearnBindingPath.xaml</DependentUpon>
