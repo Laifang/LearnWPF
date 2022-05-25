@@ -58,6 +58,9 @@
     <Compile Include="BindingPath\LinQAsSource.xaml.cs">
       <DependentUpon>LinQAsSource.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BindingPath\ObjectDataProviderAsSource.xaml.cs">
+      <DependentUpon>ObjectDataProviderAsSource.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BindingPath\XMLAsSource.xaml.cs">
       <DependentUpon>XMLAsSource.xaml</DependentUpon>
     </Compile>
@@ -94,6 +97,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BindingPath\ListSourceAsPath.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindingPath\ObjectDataProviderAsSource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
