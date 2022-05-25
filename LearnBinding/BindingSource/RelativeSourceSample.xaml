@@ -1,0 +1,46 @@
+﻿<Window x:Class="LearnBinding.BindingSource.RelativeSourceSample" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:LearnBinding.BindingSource" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="RelativeSourceSample" Width="200"
+        Height="300" mc:Ignorable="d">
+    <Grid x:Name="GridOut1"
+          Margin="10,10,10,10" Background="Red">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+        <DockPanel x:Name="DockPanelOut1"
+                   Grid.Row="0" Margin="10"
+                   Background="Orange">
+            <Grid x:Name="GridInner1"
+                  Margin="10" Background="Yellow">
+                <DockPanel x:Name="DockPanelInner1">
+                    <TextBox x:Name="TextBox"
+                             Margin="10" Background="LightYellow"
+                             FontSize="24"
+                             Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}, AncestorLevel=1}, Path=Name}"
+                             TextAlignment="Center" />
+                </DockPanel>
+            </Grid>
+        </DockPanel>
+        <StackPanel Grid.Row="1">
+            <Button Height="20" Margin="5,5,5,0"
+                    Background="Green" Click="RelativeGrid"
+                    Content="向外关联到第2个Grid" />
+            <Button Height="20" Margin="5,5,5,0"
+                    Background="LawnGreen" Click="RelativeDockPanel"
+                    Content="向外关联到第2个DockPanel" />
+            <Button Height="20" Margin="5,5,5,0"
+                    Background="LimeGreen" Click="RelativeSelf"
+                    Content="关联到自身" />
+
+        </StackPanel>
+
+    </Grid>
+    <!--
+        有些时候我们不能确定作为Source的对象叫什么名字，
+        但知道它与作为Binding目标的对象在UI布局上有相对关系，
+        比如控件自己关联自己的某个数据、关联自己某级容器的数据。
+        这时候我们就要使用Binding的RelativeSource属性
+    -->
+</Window>

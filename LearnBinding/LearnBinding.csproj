@@ -73,6 +73,9 @@
     <Compile Include="BindingSource\ObjectDataProviderAsSource.xaml.cs">
       <DependentUpon>ObjectDataProviderAsSource.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BindingSource\RelativeSourceSample.xaml.cs">
+      <DependentUpon>RelativeSourceSample.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BindingSource\XMLAsSource.xaml.cs">
       <DependentUpon>XMLAsSource.xaml</DependentUpon>
     </Compile>
@@ -115,6 +118,10 @@
     <Page Include="BindingSource\ObjectDataProviderAsSource.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BindingSource\RelativeSourceSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BindingSource\XMLAsSource.xaml">
       <Generator>MSBuild:Compile</Generator>
