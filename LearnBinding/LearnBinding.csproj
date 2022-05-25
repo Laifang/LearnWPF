@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BindingPath\XMLAsSource.xaml.cs">
+      <DependentUpon>XMLAsSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BindingPath\XMLTreeAsSource.xaml.cs">
+      <DependentUpon>XMLTreeAsSource.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tools\DataTableExtensions.cs" />
     <Page Include="BindingPath\ADOAsSource.xaml">
       <SubType>Designer</SubType>
@@ -81,6 +87,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BindingPath\ListSourceAsPath.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindingPath\XMLAsSource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindingPath\XMLTreeAsSource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,6 +158,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="BindingPath\StudentData.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

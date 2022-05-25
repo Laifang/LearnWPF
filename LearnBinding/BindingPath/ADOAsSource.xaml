@@ -4,13 +4,13 @@
         Title="DataTableAsSource" Width="250"
         Height="380" mc:Ignorable="d">
     <StackPanel Background="LightBlue">
-        <ListBox x:Name="ListBox1"
-                 Height="130" Margin="5" />
+        <ListBox x:Name="ListBox1" Height="130"
+                 Margin="5" />
         <Button Height="25" Margin="5,0"
                 Click="ButtonBase_OnClick1" Content="载入内容1" />
         <!--  多数情况下会用ListView来显示DataTable因为都有 标题行这一选项  -->
-        <ListView x:Name="ListView1"
-                  Height="130" Margin="5">
+        <ListView x:Name="ListView1" Height="130"
+                  Margin="5">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="60"
@@ -27,7 +27,7 @@
         </ListView>
         <Button Height="25" Margin="5,0"
                 Click="ButtonBase_OnClick2" Content="载入内容2" />
-        <Button Height="25" Margin="5,0"
+        <Button Height="25" Margin="5,5"
                 Click="ButtonBase_OnClick3" Content="将DataTable 作为ListView DataContext" />
 
     </StackPanel>
