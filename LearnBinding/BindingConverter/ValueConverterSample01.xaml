@@ -1,0 +1,32 @@
+﻿<Window x:Class="LearnBinding.BindingConverter.ValueConverterSample01" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:LearnBinding.BindingConverter" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="ValueConverterSample01" Width="400"
+        Height="300" mc:Ignorable="d">
+    <Window.Resources>
+        <local:CategoryToSourceConverter x:Key="cts" />
+        <local:StateToNullableBoolConverter x:Key="stb" />
+    </Window.Resources>
+    <StackPanel Margin="5" Background="LightSkyBlue">
+        <ListBox x:Name="ListBoxPlane"
+                 Height="auto" Margin="5">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="40" Height="40"
+                               Source="{Binding Path=Category, Converter={StaticResource cts}}" />
+                        <TextBlock Width="60" Margin="80,0"
+                                   Text="{Binding Path=Name}" />
+                        <CheckBox IsChecked="{Binding Path=State, Converter={StaticResource stb}}" IsThreeState="False" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="btnLoad"
+                Height="25" Margin="5,0"
+                Click="BtnLoadClicked" Content="Load" />
+        <Button x:Name="btnSave"
+                Height="25" Margin="5,0"
+                Click="BtnSaveClicked" Content="Save" />
+    </StackPanel>
+</Window>

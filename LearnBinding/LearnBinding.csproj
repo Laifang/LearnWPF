@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BindingConverter\ValueConverterSample01.xaml.cs">
+      <DependentUpon>ValueConverterSample01.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BindingSource\ADOAsSource.xaml.cs">
       <DependentUpon>ADOAsSource.xaml</DependentUpon>
     </Compile>
@@ -83,6 +86,10 @@
       <DependentUpon>XMLTreeAsSource.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tools\DataTableExtensions.cs" />
+    <Page Include="BindingConverter\ValueConverterSample01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BindingPath\BindingWithoutPath.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -181,6 +188,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="BindingSource\StudentData.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Icons\战斗机.png" />
+    <Resource Include="Icons\客机.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
