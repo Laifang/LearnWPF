@@ -37,8 +37,7 @@ namespace LearnBinding.BindingConverter
             var sb = new StringBuilder();
             foreach (Plane item in ListBoxPlane.Items)
             {
-                sb.AppendLine(string.Format("Category={0},Name={1},State{2}", item.Category, item.Name, item.State));
-
+                sb.AppendLine($"Category={item.Category},Name={item.Name},State{item.State}");
             }
             File.WriteAllText(@"\PlaneList.txt",sb.ToString());
             MessageBox.Show("文件写入成功！");
