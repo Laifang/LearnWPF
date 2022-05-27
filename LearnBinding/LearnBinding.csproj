@@ -82,6 +82,9 @@
     <Compile Include="BindingSource\XMLTreeAsSource.xaml.cs">
       <DependentUpon>XMLTreeAsSource.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BindingValidation\ValidationSample01.xaml.cs">
+      <DependentUpon>ValidationSample01.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tools\DataTableExtensions.cs" />
     <Page Include="BindingPath\BindingWithoutPath.xaml">
       <SubType>Designer</SubType>
@@ -130,6 +133,10 @@
     <Page Include="BindingSource\XMLTreeAsSource.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BindingValidation\ValidationSample01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -182,5 +189,6 @@
   <ItemGroup>
     <Resource Include="BindingSource\StudentData.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

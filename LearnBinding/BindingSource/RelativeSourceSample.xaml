@@ -3,23 +3,21 @@
         xmlns:local="clr-namespace:LearnBinding.BindingSource" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="RelativeSourceSample" Width="200"
         Height="300" mc:Ignorable="d">
-    <Grid x:Name="GridOut1"
-          Margin="10,10,10,10" Background="Red">
+    <Grid x:Name="GridOut1" Margin="10,10,10,10"
+          Background="Red">
         <Grid.RowDefinitions>
             <RowDefinition Height="180" />
             <RowDefinition Height="3*" />
         </Grid.RowDefinitions>
-        <DockPanel x:Name="DockPanelOut1"
-                   Grid.Row="0" Margin="10"
-                   Background="Orange">
-            <Grid x:Name="GridInner1"
-                  Margin="10" Background="Yellow">
+        <DockPanel x:Name="DockPanelOut1" Grid.Row="0"
+                   Margin="10" Background="Orange">
+            <Grid x:Name="GridInner1" Margin="10"
+                  Background="Yellow">
                 <DockPanel x:Name="DockPanelInner1">
-                    <TextBox x:Name="TextBox"
-                             Margin="10" Background="LightYellow"
-                             FontSize="24"
+                    <TextBox x:Name="TextBox" Margin="10"
+                             Background="LightYellow" FontSize="18"
                              Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}, AncestorLevel=1}, Path=Name}"
-                             TextAlignment="Center" />
+                             TextAlignment="Center" TextWrapping="Wrap" />
                 </DockPanel>
             </Grid>
         </DockPanel>
